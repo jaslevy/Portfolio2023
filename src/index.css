@@ -14,3 +14,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.name-title-container .name,
+.name-title-container .cs {
+    display: inline-block; /* or inline, based on your current design */
+}
+
+.centered-gif {
+    display: block; /* Adjust as per your default styling */
+}
+
+/* Styles for small mobile screens */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .name-title-container .name,
+    .name-title-container .cs {
+        display: block; /* Stacks the elements vertically */
+        text-align: center; /* Center-aligns the text */
+    }
+
+    .centered-gif {
+        display: none; /* Hides the GIF image */
+    }
+}

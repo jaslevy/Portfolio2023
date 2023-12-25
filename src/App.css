@@ -41,6 +41,20 @@ div.custom-navbar {
   border-bottom: 1px solid black; /* Add a black horizontal line */
 }
 
+div.custom-navbar .navbar-nav {
+  flex-direction: row;
+}
+
+div.custom-navbar .nav-link {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+div.custom-navbar .icons a {
+  margin-left: 10px;
+}
+
+
 .icons a {
   color: black; /* Icon color */
   margin-left: 10px; /* Spacing between icons */
@@ -291,4 +305,54 @@ div.custom-navbar {
   margin: 0 auto; /* Center the container */
   gap: 45px; /* Spacing between columns */
   padding-top: 40px; /* Adjust the value as needed */
+}
+
+/* For Responsive Displays */
+@media (max-width: 768px) {
+  div.custom-navbar .icons a {
+    font-size: 0.8em;
+  }
+  .centered-gif {
+      display: none; /* Hide the GIF image */
+  }
+  .two-column-container {
+    padding-top: 140px; /* Add top padding to the container */
+  }
+  .name-title-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .cs {
+      position: static; /* Remove absolute positioning on small screens */
+      transform: none; /* Reset transform */
+      margin-top: 10px; /* Add some space between the texts */
+  }
+  .text-column {
+      font-size: 8px; /* Shrink the text size */
+      padding-left: 0px;
+  }
+
+  .image-column{
+      width: 150px; /* Optional: Adjust image size */
+      height: auto;
+      padding-right: 0;
+  }
+  .content-container {
+    border-bottom: 0px solid rgb(246, 243, 243);
+    border-top: 0px solid rgb(246, 243, 243);
+  }
+  div.custom-navbar .icons a {
+    margin-right: 10px;
+  }
+  .about-div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .two-column-container-research-projects {
+    padding-right: 50px;
+  }
+  .two-column-container-research-projects p{
+    display: none;
+  }
 }
