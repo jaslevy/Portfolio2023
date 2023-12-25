@@ -13,6 +13,11 @@
   }
 }
 
+.active {
+  color: #000; /* Dark color for active state */
+  font-weight: bold; /* Optional: makes the text bold */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +33,262 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.custom-navbar {
+  background-color: white;
+  padding-top: 40px; /* Increase padding above the navbar */
+  max-width: 900px; /* Decrease the width of the navbar */
+  margin: 0 auto; /* Keep the navbar centered */
+  border-bottom: 1px solid black; /* Add a black horizontal line */
+}
+
+.icons a {
+  color: black; /* Icon color */
+  margin-left: 10px; /* Spacing between icons */
+}
+
+/* Style for the home page container */
+.home-container {
+  text-align: center; /* Centers inline or inline-block elements */
+  padding: 20px; /* Add padding if needed */
+  position: relative;
+}
+
+/* Style for the centered GIF */
+.centered-gif {
+  max-width: 900px; /* Ensures the image is responsive and doesn't overflow */
+  height: auto; /* Maintains the aspect ratio */
+  display: block; /* Makes the image a block element */
+  margin: 0 auto; /* Centers the image */
+}
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* This makes the container take the full viewport height */
+}
+
+.loading-container h1 {
+  /* Style for your success message */
+  font-size: 2em;
+  color: green;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-out {
+  animation: fadeOut 500ms ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Ensure the loading container fills the screen and centers content */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.d-none {
+  display: none;
+}
+
+.name-title-container {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Aligns items vertically */
+  font-family: 'Roboto', sans-serif;
+  font-size: 38px; 
+  position: absolute;
+  top: 25px; /* Adjust this value to move your text higher */
+  left: 50%; /* Centering horizontally */
+  transform: translateX(-50%); /* Align center horizontally */
+}
+
+.name, .title {
+  margin: 0 5px; /* Spacing between texts */
+}
+
+.name {
+  color: #000; /* Dark color for 'JASPER LEVY' */
+  font-weight: 500; /* Bold font weight */
+}
+
+.title {
+  color: #e05708; /* Lighter gray for 'COMPUTER SCIENCE' */
+  font-weight: 500; /* Regular font weight */
+  font-size: 20px; /* Regular font weight */
+}
+.cs {
+    color: #606060; /* Lighter gray for 'COMPUTER SCIENCE' */
+    font-weight: 500; /* Regular font weight */
+    font-size: 20px; /* Regular font weight */
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Aligns items vertically */
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 48px; /* Adjust this value to move your text higher */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%); /* Align center horizontally */
+    width: 400px
+}
+
+.content-container {
+  max-width: 900px;
+  margin: -20px auto 0; /* Moves the div 20px upwards */
+  border-top: .5px solid black;
+  border-bottom: .5px solid black;
+  transform: translate(0%, -5000%); /* Moves the div up */
+}
+
+
+.two-column-container {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto; /* Center the container */
+  gap: 45px; /* Spacing between columns */
+  border-bottom: 1px solid black;
+  padding-bottom: 30px; /* Adjust the value as needed */
+}
+
+.text-column {
+  flex: 1; /* Takes up half of the container */
+  text-align: left; /* Left-aligns the text */
+  padding-left: 60px;
+  font-size: 14px
+}
+
+.image-column {
+  flex: 1; /* Takes up the other half */
+  display: flex;
+  justify-content: center; /* Center the image in the column */
+  align-items: center; /* Vertically center */
+  padding-right: 60px
+}
+
+.image-column img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.three-column-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto; /* Centers the container */
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.column {
+  flex: 1; /* Each column takes equal width */
+  padding: 10px; /* Optional padding for spacing inside columns */
+  /* Add additional styling as needed */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+  color: black;
+  transition: .5s ease;
+  opacity: 0;
+  display: flex;
+  align-items: center;  /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  font-size: 12px;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.acknowledgment {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 0.8em;
+  color: #333; /* Adjust the color as per your site's theme */
+  background-color: #ffffff; /* Optional, for better visibility */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* You can adjust the width as needed */
+  /* Add other styling properties as needed */
+}
+
+.overlay .text {
+  padding: 20px; /* Adjust the padding as needed */
+  /* Other styles (if any) */
+}
+
+.two-column-container-projects {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto; /* Center the container */
+  gap: 45px; /* Spacing between columns */
+  padding-top: 70px; /* Adjust the value as needed */
+}
+
+.two-column-container-research-projects {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto; /* Center the container */
+  gap: 45px; /* Spacing between columns */
+  padding-top: 40px; /* Adjust the value as needed */
+  border-bottom: 1px solid black;
+  padding-bottom: 30px; /* Adjust the value as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.two-column-container-research-projects:hover {
+  transform: scale(1.05);
+}
+
+.text-column-research {
+  flex: 1; /* Takes up half of the container */
+  text-align: left; /* Left-aligns the text */
+  padding-left: 60px;
+  font-size: 10px
+}
+
+.about-div {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto; /* Center the container */
+  gap: 45px; /* Spacing between columns */
+  padding-top: 40px; /* Adjust the value as needed */
 }
