@@ -33,7 +33,7 @@ function HomePage() {
           <div className="image-container">
             <img src={vital} alt="VitalMap" width="200" height="auto"  />
             <div className="overlay">
-              <div className="text"> I collaborated with Princeton Students for Reproductive Justice and worked closely with a team of 4 other Princeton undergrads to build VitalMap, a platform that provides users with locations and stock of health products on campus.
+              <div className="text" id="hide-on-small"> I collaborated with Princeton Students for Reproductive Justice and worked closely with a team of 4 other Princeton undergrads to build VitalMap, a platform that provides users with locations and stock of health products on campus.
 This Web-App integrates Python and PostgreSQL for backend functions and JavaScript, Bootstrap, HTML, CSS on the frontend. 
 </div>
             </div>
@@ -45,7 +45,7 @@ This Web-App integrates Python and PostgreSQL for backend functions and JavaScri
           <div className="image-container">
             <img src={trek} alt="TrekAI" width="200" height="auto" />
             <div className="overlay">
-              <div className="text" >TrekAI is a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
+              <div className="text" id="hide-on-small">TrekAI is a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
               integrates openAI's API for trip recommendation and is built on React.js, Flask, and AWS. TrekAI is in progress as of December 2023.</div>
             </div>
           </div>
@@ -56,7 +56,7 @@ This Web-App integrates Python and PostgreSQL for backend functions and JavaScri
           <div className="image-container">
             <img src={cluster} alt="Research" width="200" height="auto" />
             <div className="overlay">
-              <div className="text">At Princeton, I have had the priveledge of conducting research as a student and as a research associate in the Department of African American Studies. My research spans genre and mood classification of music based on psychological models, LLM policy in higher education, and disparities in public broadband access.
+              <div className="text" id="hide-on-small">At Princeton, I have had the priveledge of conducting research as a student and as a research associate in the Department of African American Studies. My research spans genre and mood classification of music based on psychological models, LLM policy in higher education, and disparities in public broadband access.
               Click here to learn more. </div>
             </div>
           </div>
