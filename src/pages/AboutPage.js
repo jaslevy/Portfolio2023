@@ -1,5 +1,5 @@
 import React from 'react';
-import fencing from './images/fencing.jpg'
+import fencing from '../images/fencing.jpg'
 
 function AboutPage() {
   return (

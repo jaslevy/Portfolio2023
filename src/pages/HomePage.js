@@ -1,9 +1,9 @@
 import React from 'react';
-import aiHead from './images/tumblr_74b01053f0b8a08d8eb2607ee88e3f78_e1e0d81a_540.webp';
-import headShot from './images/headshot.png'
-import trek from './images/TrekAI_logo_white_bg.png'
-import cluster from './images/Cluster2.png'
-import vital from './images/VM2.png'
+import aiHead from '../images/tumblr_74b01053f0b8a08d8eb2607ee88e3f78_e1e0d81a_540.webp';
+import headShot from '../images/headshot.png'
+import trek from '../images/TrekAI_logo_white_bg.png'
+import cluster from '../images/Cluster2.png'
+import vital from '../images/VM2.png'
 import { Link } from 'react-router-dom';
 
 function HomePage() {

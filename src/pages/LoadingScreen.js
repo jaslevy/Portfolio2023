@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import loadingGIF from './images/tumblr_ng7vdn4XQw1qc0s10o1_500.webp'
+import loadingGIF from '../images/tumblr_ng7vdn4XQw1qc0s10o1_500.webp'
 
 const LoadingScreen = ({ onFadeOutCompleted }) => {
     const [fadeOut, setFadeOut] = useState(false);

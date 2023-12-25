@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
+import HomePage from './pages/HomePage.js';
+import AboutPage from './pages/AboutPage.js';
 import ProjectOne from './projects/ProjectOne.js';
 import ProjectTwo from './projects/ProjectTwo.js';
 import ProjectThree from './projects/ProjectThree.js';
@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import CustomNavLink from './CustomNavLink';
-import LoadingScreen from './LoadingScreen';
-import './App.css';
+import LoadingScreen from './pages/LoadingScreen.js';
+import './css/App.css';
 
 
 function App() {
