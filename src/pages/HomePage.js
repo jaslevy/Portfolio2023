@@ -41,7 +41,6 @@ This Web-App integrates Python and PostgreSQL for backend functions and JavaScri
         </Link>
         </div>
         <div className="column">
-        <Link to="/">
           <a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">
               <div className="image-container">
                 <img src={trek} alt="TrekAI" width="200" height="auto" />
@@ -51,7 +50,6 @@ This Web-App integrates Python and PostgreSQL for backend functions and JavaScri
                 </div>
               </div>
             </a>
-          </Link>
         </div>
         <div className="column">
         <Link to="/research">
