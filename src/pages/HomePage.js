@@ -45,8 +45,10 @@ This Web-App integrates Python and PostgreSQL for backend functions and JavaScri
           <div className="image-container">
             <img src={trek} alt="TrekAI" width="200" height="auto" />
             <div className="overlay">
-              <div className="text" id="hide-on-small">TrekAI is a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
-              integrates openAI's API for trip recommendation and is built on React.js, Flask, and AWS. TrekAI is in progress as of December 2023.</div>
+              <a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">
+                <div className="text" id="hide-on-small">TrekAI is a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
+                integrates openAI's API for trip recommendation and is built on React.js, Flask, and AWS. TrekAI is in progress as of December 2023. Click here to view pre-launch page.</div>
+              </a>
             </div>
           </div>
           </Link>
