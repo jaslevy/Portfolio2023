@@ -19,9 +19,21 @@ function HomePage() {
       </div>
       <div className="two-column-container">
         <div className="text-column">
-          <p>I am a senior studying computer science at Princeton University. I hold a certificate (minor) in Statistics and Machine Learning. I have an expected graduation date of May 2024. </p>
+          <p>I am a senior studying computer science at Princeton University (graduating in May 2024). I picked up a minor in Statistics and Machine Learning as well. </p>
           <p>I have experience in software development, academic research, modern machine learning techniques, and leadership through professional and volunteer work. Some more specific interests of mine include GIS applications, decentralized systems, technology policy, and healthcare innovation.</p>
-          <p>I love geography and hiking - so much so that I started a new project. I am currently working on TrekAI, a budget-tailored hiking recommendation platform.</p>
+          <p>
+            <strong>Current Endeavors</strong>
+            <ul>
+                <li><strong><a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">TrekAI</a></strong> - hiking recommendation platform</li>
+
+                <li><strong><a href='https://github.com/jaslevy/Ethereum_Casino' target="_blank" rel="noopener noreferrer">Ethereum Casino</a></strong> - building Solidity smart contract and web3.js + TypeScript frontend </li>
+                <li><strong>Network Centrality Analysis on US Critical Infrastructure</strong> - research for ORF387 (Networks)</li>
+                <li><strong>Externship - HP Tech Ventures</strong> - Deal Sourcing + Business Analytics for GenAI productivity tools </li>
+                <li><strong>Finishing my final semester</strong> - Digital Photography and Decentralized Finance coursework</li>
+            </ul>
+          
+
+          </p>
         </div>
         <div className="image-column">
           <img src={headShot} alt="Description" width="200" height="auto" />
@@ -62,7 +74,9 @@ This Web-App integrates Python and PostgreSQL for backend functions and JavaScri
           </div>
         </Link>
         </div>
+        
       </div>
+      
     </div>
   );
 }
