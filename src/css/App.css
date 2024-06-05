@@ -161,15 +161,20 @@ div.custom-navbar .icons a {
     transform: translateX(-50%); /* Align center horizontally */
     width: 400px
 }
-
 .content-container {
   max-width: 900px;
   margin: -20px auto 0; /* Moves the div 20px upwards */
   border-top: .5px solid black;
   border-bottom: .5px solid black;
-  transform: translate(0%, -5000%); /* Moves the div up */
 }
 
+@media (max-width: 768px) {
+  .content-container {
+    border-top: .5px solid black; /* Ensure top border remains */
+    border-bottom: .5px solid black; /* Ensure bottom border remains */
+    transform: none; /* Prevents the div from moving up on smaller screens */
+  }
+}
 
 .two-column-container {
   display: flex;
@@ -188,6 +193,12 @@ div.custom-navbar .icons a {
   font-size: 14px
 }
 
+@media (max-width: 768px) {
+  .text-column {
+    font-size: 12px; /* Adjust this value based on your design needs */
+  }
+}
+
 .image-column {
   flex: 1; /* Takes up the other half */
   display: flex;
@@ -203,11 +214,31 @@ div.custom-navbar .icons a {
 
 .three-column-container {
   display: flex;
-  justify-content: space-between;
-  max-width: 900px;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusts space between columns */
   margin: 0 auto; /* Centers the container */
-  padding-top: 20px;
-  padding-bottom: 40px;
+  max-width: 900px; /* Adjust this width based on your design needs */
+  gap: 5px 5px; /* Reduced vertical gap */
+  align-items: flex-start;
+  padding-top: 10px;
+}
+.column {
+  flex: 1 0 100%; /* Each column takes full width on small screens */
+  max-width: 100%;
+  padding: 10px 10px 10px 10px; /* Adjust padding as needed */
+  margin-bottom: 0; /* Remove bottom margin if it's not needed */
+}
+/* Media query for sma
+ll screens */
+@media (max-width: 768px) {
+  .column {
+    flex: 1 0 100%; /* Each column takes full width on small screens */
+    max-width: 100%;
+  }
+}
+.column {
+  flex: 1 1 30%; /* Each column will take up roughly 30% of the container width, adjusting for flex-basis */
+  max-width: 30%; /* Ensures that no column grows beyond 30% width */
 }
 
 .column {
@@ -241,6 +272,24 @@ div.custom-navbar .icons a {
   align-items: center;  /* Centers text vertically */
   justify-content: center; /* Centers text horizontally */
   font-size: 12px;
+}
+.image-wrapper {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid black; /* Adds a black border to the bottom */
+  max-width: 900px;
+  margin: 0 auto; /* Centers the wrapper horizontally */
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    border-bottom: none; /* Removes the border from the image wrapper on small screens */
+    padding-top: 0px;
+    margin-top: 20px; /* Adjust this value as needed to move the image wrapper down */
+  }
 }
 
 .image-container:hover .overlay {
@@ -307,6 +356,15 @@ div.custom-navbar .icons a {
   padding-top: 40px; /* Adjust the value as needed */
 }
 
+.two-column-container {
+  margin-top: 0; /* Remove top margin to reduce space */
+  padding: 2%;
+}
+@media (max-width: 768px) {
+  .two-column-container {
+    padding-top: 0; /* Remove top padding on small screens */
+  }
+}
 /* For Responsive Displays */
 @media (max-width: 768px) {
   div.custom-navbar .icons a {
@@ -316,7 +374,7 @@ div.custom-navbar .icons a {
       display: none; /* Hide the GIF image */
   }
   .two-column-container {
-    padding-top: 140px; /* Add top padding to the container */
+    padding-top: 2%; /* Add top padding to the container */
   }
   .name-title-container {
     flex-direction: column; /* Stack items vertically */
@@ -362,4 +420,17 @@ div.custom-navbar .icons a {
     padding-left: 20px; /* Adjust the padding value as needed */
     padding-right: 20px;
   }
+
 }
+
+@media (max-width: 768px) {
+  .three-column-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0px; /* Ensures no vertical gap */
+  }
+  .three-column-container .column {
+    margin-bottom: 0; /* Removes bottom margin from columns */
+  }
+}
+

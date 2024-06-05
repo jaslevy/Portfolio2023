@@ -1,5 +1,6 @@
 import React from 'react';
 import RF2 from '../images/RF2sample.png'
+import NYCMETRO from '../images/NYCMETRO.png'
 import CertPost from '../images/SML-Poster_36x24png.png'
 import Cluster from '../images/Cluster2.png'
 import JDL from '../images/JDL.png'
@@ -7,7 +8,36 @@ import JDL from '../images/JDL.png'
 function ProjectTwo() {
   return (
     <>
+        
         <div className="two-column-container-research-projects">
+            <div className="text-column-research">
+                <h5>Structural Determinants of Metro System Resilience: A Graph-Theoretic
+Study of New York City and London</h5>
+            <p>Designing efficient transportation networks that are resilient to node failure is important for system resilience
+during perturbation. Transportation infrastructure around
+the world must be designed in a way that promotes resilience during both targeted attacks and natural disasters. In this paper, we examine two of the world’s
+largest metropolitan subway systems – New York City’s
+MTA subway and the London Underground (Colloquially
+known as “The Tube”). We perform resilience analysis
+by simulating service interruptions on highly important
+stations as well as service interruptions on a percentage
+of randomly selected stations. We also investigate how
+the efficiency of the network changes as these simulations
+progress. Our results show that the London subway system’s efficiency is more impacted by targeted attacks vs
+random outages as compared to New York’s subway system. In our discussion and conclusion, we examine how
+structural differences in the networks contribute to this
+result as well as how our findings can be used to inform
+more resilient transportation network designs.</p>
+
+            <div style={{ textAlign: 'center' }}>
+                <a href="https://drive.google.com/file/d/1c-p9I4YBRdzwnP4rHjoay2T8SqXe1xWx/view" target="blank"> PDF</a>
+            </div>
+            </div>
+        <div className="image-column">
+             <img src={NYCMETRO} alt="Description" width="300" height="auto" />
+        </div>
+      </div>
+      <div className="two-column-container-research-projects">
             <div className="text-column-research">
                 <h5>Examining the Effect of Lyrical Sentiment in Bimodal Mood Classification</h5>
             <p>Music Information retrieval (MIR) is a field of research that has become increasingly engaged in the past few decades due to the streaming of music and the emergence of recommendation algorithms on popular music media platforms. This paper explores potential classification accuracy benefits of incorporating lyrical sentiment analysis outputs into a model trained on audio features. The better of two different lexicon-based sentiment analysis approaches is used to test two different audio-feature-based approaches — a Random Forest and a Feed forward Neural Network. The results show that with a Random Forest, the inclusion of a lyrical sentiment predictor actually lowered accuracy. Conversely, the inclusion of the same predictor increased the accuracy of the Neural Network. This suggests that the benefit of using a sentiment predictor alongside audio-features is inconclusive and may vary by approach. The possibility of the sentiment predictor being correlated to the prediction outputs can lead to a potential leakage effect which may hinder this bimodal approach to mood classification.

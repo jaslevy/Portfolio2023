@@ -12,6 +12,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import CustomNavLink from './CustomNavLink';
 import LoadingScreen from './pages/LoadingScreen.js';
 import './css/App.css';
+import GalleryPage from './pages/galleryPage.js';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                 <CustomNavLink as={Link} to="/">Home</CustomNavLink>
                 <CustomNavLink as={Link} to="/about">About</CustomNavLink>
                 <CustomNavLink as={Link} to="/research">Research</CustomNavLink>
+                <CustomNavLink as={Link} to="/gallery">Gallery</CustomNavLink>
               </Nav>
               <div className="icons">
                 <a href="https://www.linkedin.com/in/jasper-levy-956722208/" target="_blank" rel="noopener noreferrer">
@@ -53,6 +55,7 @@ function App() {
             <Route path="/p1" element={<ProjectOne />} />
             <Route path="/p2" element={<ProjectTwo />} />
             <Route path="/research" element={<ProjectThree />} />
+            <Route path="/gallery" element={<GalleryPage />} />
           </Routes>
           <div class="acknowledgment">
             © 2023 inspired by <a href="https://www.tedsumers.info" target="_blank" rel="noopener noreferrer">Ted Sumers Site</a> and designs are from <a href="https://patakk.tumblr.com" target="_blank" rel="noopener noreferrer">PATAKK on Tumblr</a>.
