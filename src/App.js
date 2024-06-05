@@ -32,9 +32,11 @@ function App() {
             <Navbar expand="lg" className="justify-content-between">
               <Nav className="ml-auto">
                 <CustomNavLink as={Link} to="/">Home</CustomNavLink>
-                <CustomNavLink as={Link} to="/about">About</CustomNavLink>
                 <CustomNavLink as={Link} to="/research">Research</CustomNavLink>
                 <CustomNavLink as={Link} to="/gallery">Gallery</CustomNavLink>
+                <CustomNavLink as={Link} to="/about">About</CustomNavLink>
+                
+                
               </Nav>
               <div className="icons">
                 <a href="https://www.linkedin.com/in/jasper-levy-956722208/" target="_blank" rel="noopener noreferrer">
@@ -43,7 +45,7 @@ function App() {
                 <a href="https://www.github.com/jaslevy" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faGithub} size="lg" />
                 </a>
-                <a href="mailto:jglevy@princeton.edu">
+                <a href="mailto:jasplevy@gmail.com">
                   <FontAwesomeIcon icon={faEnvelope} size="lg" />
                 </a>
               </div>

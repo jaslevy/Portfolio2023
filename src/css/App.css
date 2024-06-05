@@ -35,7 +35,7 @@
 
 div.custom-navbar {
   background-color: white;
-  padding-top: 40px; /* Increase padding above the navbar */
+  padding-top: 10px; /* Increase padding above the navbar */
   max-width: 900px; /* Decrease the width of the navbar */
   margin: 0 auto; /* Keep the navbar centered */
   border-bottom: 1px solid black; /* Add a black horizontal line */
@@ -142,6 +142,7 @@ div.custom-navbar .icons a {
   font-weight: 500; /* Bold font weight */
 }
 
+
 .title {
   color: #e05708; /* Lighter gray for 'COMPUTER SCIENCE' */
   font-weight: 500; /* Regular font weight */
@@ -159,7 +160,7 @@ div.custom-navbar .icons a {
     top: 48px; /* Adjust this value to move your text higher */
     left: 50%; /* Centering horizontally */
     transform: translateX(-50%); /* Align center horizontally */
-    width: 400px
+    width: 400px;
 }
 .content-container {
   max-width: 900px;
@@ -189,13 +190,21 @@ div.custom-navbar .icons a {
 .text-column {
   flex: 1; /* Takes up half of the container */
   text-align: left; /* Left-aligns the text */
-  padding-left: 60px;
+  padding-left: 40px;
   font-size: 14px
+}
+
+.section-title {
+  font-size: 24px
 }
 
 @media (max-width: 768px) {
   .text-column {
-    font-size: 12px; /* Adjust this value based on your design needs */
+    font-size: 10px; /* Adjust this value based on your design needs */
+    padding-left: 0px
+  }
+  .section-title {
+    font-size: 14px; /* Adjust this value based on your design needs */
   }
 }
 
@@ -221,6 +230,7 @@ div.custom-navbar .icons a {
   gap: 5px 5px; /* Reduced vertical gap */
   align-items: flex-start;
   padding-top: 10px;
+  padding-bottom: 50px;
 }
 .column {
   flex: 1 0 100%; /* Each column takes full width on small screens */
@@ -363,12 +373,26 @@ ll screens */
 @media (max-width: 768px) {
   .two-column-container {
     padding-top: 0; /* Remove top padding on small screens */
+    gap: 45px;
   }
 }
 /* For Responsive Displays */
 @media (max-width: 768px) {
+  div.custom-navbar .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  div.custom-navbar .icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   div.custom-navbar .icons a {
     font-size: 0.8em;
+    margin-right: 10px; /* Center icons and adjust spacing */
   }
   .centered-gif {
       display: none; /* Hide the GIF image */
@@ -386,10 +410,6 @@ ll screens */
       transform: none; /* Reset transform */
       margin-top: 10px; /* Add some space between the texts */
   }
-  .text-column {
-      font-size: 8px; /* Shrink the text size */
-      padding-left: 0px;
-  }
 
   .image-column{
       width: 150px; /* Optional: Adjust image size */
@@ -399,9 +419,6 @@ ll screens */
   .content-container {
     border-bottom: 0px solid rgb(246, 243, 243);
     border-top: 0px solid rgb(246, 243, 243);
-  }
-  div.custom-navbar .icons a {
-    margin-right: 10px;
   }
   .about-div {
     padding-left: 20px;
@@ -433,4 +450,6 @@ ll screens */
     margin-bottom: 0; /* Removes bottom margin from columns */
   }
 }
+
+
 

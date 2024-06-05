@@ -25,14 +25,11 @@ function HomePage() {
           <img src={headShot} alt="Cityscape" style={{ width: "200px", height: "auto", paddingBottom: '100px', paddingTop: '100px', position: 'center' }}/>
         </div>
       <div className="two-column-container">
-        <div className="text-column" style={{ fontSize: '16px' }}>
-          <p>I am a recent graduate from Princeton University with a Bachelor's degree in Computer Science. In addition to my major, I picked up a minor in Statistics and Machine Learning. </p>
-          <p>I have experience in <strong>software development</strong>, <strong>academic research</strong>, <strong>machine learning</strong>, and <strong>leadership</strong> through professional and volunteer work. Some more specific interests of mine include GIS applications, decentralized systems, technology policy, healthcare innovation, and graph data science</p>
-        </div>
+       
         <div className="text-column">
          
           <p>
-            <strong style={{ fontSize: '24px' }}>Current Endeavors</strong>
+            <strong className="section-title">Current Endeavors</strong>
             <div style={{ paddingLeft: '20px' }}>
               <img src={neo4jLogo} alt="Neo4j Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>
               <strong><a href='https://neo4j.com/' target="_blank" rel="noopener noreferrer">Neo4j</a></strong> - SWE Intern (Consulting)
@@ -41,7 +38,7 @@ function HomePage() {
               <img src={trekAILogo} alt="TrekAI Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>
               <strong><a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">TrekAI</a></strong> - hiking recommendation platform
             </div>
-            <strong style={{ fontSize: '24px' }}>Recent Work</strong>
+            <strong className="section-title">Recent Work</strong>
             <ul>
               
 
@@ -57,6 +54,11 @@ function HomePage() {
           
 
           </p>
+        </div>
+        <div className="text-column">
+          <strong className="section-title">Background</strong>
+          <p>I am a recent graduate from Princeton University with a B.S.E. degree in <strong>Computer Science</strong>. In addition to my major, I picked up a minor in <strong>Statistics and Machine Learning. </strong></p>
+          <p>I have experience in <strong>software development</strong>, <strong>academic research</strong>, <strong>machine learning</strong>, and <strong>leadership</strong> through professional and volunteer work. Some more specific interests of mine include GIS applications, decentralized systems, technology policy, healthcare innovation, and graph data science</p>
         </div>
       </div>
         <div className="three-column-container">
