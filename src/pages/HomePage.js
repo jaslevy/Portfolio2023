@@ -100,28 +100,31 @@ function HomePage() {
           </div>
           <div className="row">
             <div className="column">
-              <Link to="/project4">
+            <a href=' https://receptive-cause-b76.notion.site/Sepolia-Roulette-05df9f3c249544adadb1da70af12bb6e' target="_blank" rel="noopener noreferrer">
                 <div className="image-container">
                   <img src={EthCasino} alt="Project 4" width="200" height="auto" />
                   <div className="overlay">
-                    <div className="text" id="hide-on-small">Description of Project 4</div>
+                    <div className="text" id="hide-on-small">A casino game where players stake Sepolia in a competitive, roulette-inspired game, leveraging a smart contract to manage and distribute bets and winnings. With no house and contract transparency, our game is fair and decentralized for all players. Click here to watch gameplay and learn more.
+</div>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
             <div className="column">
+            <Link to="/gallery">
               <div className="image-container">
                 <img src={GallerySquare} alt="Project 5" width="200" height="auto" />
                 <div className="overlay">
-                  <div className="text" id="hide-on-small">Description of Project 5</div>
+                  <div className="text" id="hide-on-small">Photo Gallery. Many of these images were published in the VIS 213 Spring 2024 magazine by the department of Visual Arts at Princeton. Click here to view. </div>
                 </div>
               </div>
+            </Link>
             </div>
             <div className="column">
               <div className="image-container">
                 <img src={GraySquare} alt="Project 6" width="200" height="auto" />
                 <div className="overlay">
-                  <div className="text" id="hide-on-small">Description of Project 6</div>
+                  <div className="text" id="hide-on-small"></div>
                 </div>
               </div>
             </div>
