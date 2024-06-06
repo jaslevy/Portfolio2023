@@ -1,6 +1,4 @@
 import React from 'react';
-import aiHead from '../images/tumblr_74b01053f0b8a08d8eb2607ee88e3f78_e1e0d81a_540.webp';
-import City from '../images/bwterm.jpeg'
 import trekAILogo from '../images/TREK AI LOGO.svg'
 import neo4jLogo from '../images/neo4j_logo_globe.png'
 import headShot from '../images/headshot.png'

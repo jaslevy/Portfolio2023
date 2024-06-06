@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Gallery } from 'react-grid-gallery';
 import '../css/App.css'; // Make sure the path is correct
 
@@ -29,16 +29,12 @@ function importAll(r) {
 const images = importAll(require.context('../Gallery/', false, /\.(png|jpe?g|svg)$/));
 
 const GalleryPage = () => {
-    const [index, setIndex] = useState(-1); // -1 means no image is selected
-
-    const handleClick = (idx) => setIndex(idx);
 
     return (
         <div className="gallery-container">
             <Gallery
                 images={images.map((img, idx) => ({
                     ...img,
-                    onClick: () => handleClick(idx)
                 }))}
                 enableImageSelection={false}
                 columnCount={"auto"}
