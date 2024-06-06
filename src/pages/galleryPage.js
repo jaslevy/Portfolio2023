@@ -1,73 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Gallery } from 'react-grid-gallery';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+import '../css/App.css'; // Make sure the path is correct
 
-export const images = [
-    {
-      src: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
-      thumbnail: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_n.jpg",
-      thumbnailWidth: 240,
-      thumbnailHeight: 320,
-      caption: "8H (gratisography.com)"
-    },
-    {
-      src: "https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg",
-      thumbnail: "https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_n.jpg",
+function createOverlay(filename) {
+    // Remove the file extension from the filename
+    const cleanCaption = filename.replace(/\.[^/.]+$/, "");
+    return (
+        <div className="custom-overlay__caption">
+            {cleanCaption}
+        </div>
+    );
+}
+
+function importAll(r) {
+  let images = [];
+  r.keys().forEach((item) => { 
+    images.push({
+      src: r(item),
+      thumbnail: r(item),
       thumbnailWidth: 320,
-      thumbnailHeight: 190,
-      caption: "286H (gratisography.com)"
-    },
-    {
-      src: "https://c7.staticflickr.com/9/8569/28941134686_d57273d933_b.jpg",
-      thumbnail: "https://c7.staticflickr.com/9/8569/28941134686_d57273d933_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 148,
-      caption: "315H (gratisography.com)"
-    },
-    {
-      src: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg",
-      thumbnail: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 213,
-      caption: "201H (gratisography.com)"
-    },
-    {
-      src: "https://c2.staticflickr.com/9/8239/28897202241_1497bec71a_b.jpg",
-      thumbnail: "https://c2.staticflickr.com/9/8239/28897202241_1497bec71a_n.jpg",
-      thumbnailWidth: 248,
-      thumbnailHeight: 320,
-      caption: "Big Ben (Tom Eversley - isorepublic.com)"
-    },
-    {
-      src: "https://c7.staticflickr.com/9/8785/28687743710_3580fcb5f0_b.jpg",
-      thumbnail: "https://c7.staticflickr.com/9/8785/28687743710_3580fcb5f0_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 113,
-      caption: (
-        <span style={{ color: "darkred" }}>
-          Red Zone - <i>Paris</i>
-        </span>
-      ),
-    },
-    {
-      src: "https://c6.staticflickr.com/9/8520/28357073053_cafcb3da6f_b.jpg",
-      thumbnail: "https://c6.staticflickr.com/9/8520/28357073053_cafcb3da6f_n.jpg",
-      thumbnailWidth: 313,
-      thumbnailHeight: 320,
-      caption: "Wood Glass (Tom Eversley - isorepublic.com)"
-    },
-    {
-      src: "https://c8.staticflickr.com/9/8104/28973555735_ae7c208970_b.jpg",
-      thumbnail: "https://c8.staticflickr.com/9/8104/28973555735_ae7c208970_n.jpg",
-      thumbnailWidth: 320,
-      thumbnailHeight: 213,
-      caption: "Flower Interior Macro (Tom Eversley - isorepublic.com)"
-    },
-  ];
+      thumbnailHeight: 200,
+      customOverlay: createOverlay(item.replace('./', '')) // Remove './' and pass to createOverlay
+    });
+  });
+  return images;
+}
+
+const images = importAll(require.context('../Gallery/', false, /\.(png|jpe?g|svg)$/));
 
 const GalleryPage = () => {
+    const [index, setIndex] = useState(-1); // -1 means no image is selected
+
+    const currentImage = images[index];
+    const nextIndex = (index + 1) % images.length;
+    const prevIndex = (index + images.length - 1) % images.length;
+
+    const handleClick = (index) => setIndex(index);
+    const handleClose = () => setIndex(-1);
+    const handleMoveNext = () => setIndex(nextIndex);
+    const handleMovePrev = () => setIndex(prevIndex);
+
     return (
-        <div style={{ display: "block", minHeight: "1px", width: "100%", overflow: "auto" }}>
-            <Gallery images={images}/>
+        <div className="gallery-container">
+            <Gallery
+                images={images.map((img, idx) => ({
+                    ...img,
+                    onClick: () => handleClick(idx)
+                }))}
+                enableImageSelection={false}
+            />
+            {index !== -1 && (
+                <Lightbox
+                    mainSrc={currentImage.src}
+                    nextSrc={images[nextIndex].src}
+                    prevSrc={images[prevIndex].src}
+                    onCloseRequest={handleClose}
+                    onMovePrevRequest={handleMovePrev}
+                    onMoveNextRequest={handleMoveNext}
+                />
+            )}
         </div>
     );
 }

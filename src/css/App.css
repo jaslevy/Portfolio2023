@@ -274,7 +274,7 @@ ll screens */
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.90);
   color: black;
   transition: .5s ease;
   opacity: 0;
@@ -392,7 +392,6 @@ ll screens */
   }
   div.custom-navbar .icons a {
     font-size: 0.8em;
-    margin-right: 10px; /* Center icons and adjust spacing */
   }
   .centered-gif {
       display: none; /* Hide the GIF image */
@@ -452,4 +451,32 @@ ll screens */
 }
 
 
+.gallery-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: block;
+  width: 900px;
+  margin: 0 auto;
+  padding-left:50px; /* Adds padding on both sides */
+  padding-right :50px; /* Adds padding on both sides */
+  overflow: auto;
+}
 
+@media (max-width: 960px) {
+  .gallery-container {
+      width: calc(100% - 20px); /* Take full width minus some padding */
+      padding: 0 10px; /* Smaller padding on smaller screens */
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+}
+
+.custom-overlay__caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
