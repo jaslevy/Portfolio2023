@@ -37,10 +37,10 @@ const GalleryPage = () => {
     const nextIndex = (index + 1) % images.length;
     const prevIndex = (index + images.length - 1) % images.length;
 
-    const handleClick = (index) => setIndex(index);
+    const handleClick = (idx) => setIndex(idx);
     const handleClose = () => setIndex(-1);
-    const handleMoveNext = () => setIndex(nextIndex);
     const handleMovePrev = () => setIndex(prevIndex);
+    const handleMoveNext = () => setIndex(nextIndex);
 
     return (
         <div className="gallery-container">
@@ -50,12 +50,19 @@ const GalleryPage = () => {
                     onClick: () => handleClick(idx)
                 }))}
                 enableImageSelection={false}
+                columnCount={"auto"}
+                columnWidth={230}
+                gapSize={24}
             />
             {index !== -1 && (
                 <Lightbox
                     mainSrc={currentImage.src}
+                    imageTitle={currentImage.caption}
+                    mainSrcThumbnail={currentImage.thumbnail}
                     nextSrc={images[nextIndex].src}
+                    nextSrcThumbnail={images[nextIndex].thumbnail}
                     prevSrc={images[prevIndex].src}
+                    prevSrcThumbnail={images[prevIndex].thumbnail}
                     onCloseRequest={handleClose}
                     onMovePrevRequest={handleMovePrev}
                     onMoveNextRequest={handleMoveNext}
