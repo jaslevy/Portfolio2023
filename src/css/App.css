@@ -160,7 +160,7 @@ div.custom-navbar .icons a {
     top: 48px; /* Adjust this value to move your text higher */
     left: 50%; /* Centering horizontally */
     transform: translateX(-50%); /* Align center horizontally */
-    width: 400px;
+    width: 500px;
 }
 .content-container {
   max-width: 900px;

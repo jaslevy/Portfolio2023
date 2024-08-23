@@ -39,6 +39,7 @@ function App() {
                 
               </Nav>
               <div className="icons">
+                
                 <a href="https://www.linkedin.com/in/jasper-levy-956722208/" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} size="lg" />
                 </a>

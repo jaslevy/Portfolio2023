@@ -1,7 +1,9 @@
 import React from 'react';
 import trekAILogo from '../images/TREK AI LOGO.svg'
 import neo4jLogo from '../images/neo4j_logo_globe.png'
-import headShot from '../images/headshot.png'
+import cornellLogo from '../images/Cornell-University-Seal-Logo.png'
+import headShot from '../images/headshot3.png'
+import chatImage from '../images/docbot.png'
 import EthCasino from '../images/sepoliaHomepage.png'
 import GallerySquare from '../images/GallerySquare.png'
 import GraySquare from '../images/GraySquare.jpg'
@@ -16,18 +18,23 @@ function HomePage() {
     <div className="home-container" >
         <div className="name-title-container">
         <span className="name">JASPER LEVY</span>
-        <span className="cs"> PRINCETON COMPUTER SCIENCE</span>
+        <span className="cs"> PRINCETON & CORNELL COMPUTER SCIENCE</span>
         <span className="title"></span>
       </div>
         <div className="image-wrapper">
-          <img src={headShot} alt="Cityscape" style={{ width: "200px", height: "auto", paddingBottom: '100px', paddingTop: '100px', position: 'center' }}/>
+          <img src={headShot} alt="Cityscape" style={{ width: "300px", height: "auto", paddingBottom: '80px', paddingTop: '100px', position: 'center' }}/>
         </div>
       <div className="two-column-container">
        
         <div className="text-column">
          
           <p>
+            
             <strong className="section-title">Current Endeavors</strong>
+            <div style={{ paddingLeft: '20px' }}>
+              <img src={cornellLogo} alt="Cornell Logo" style={{ width: "50px", marginRight: "5px", verticalAlign: "middle" }}/>
+              Cornell CS Master's Student
+            </div>
             <div style={{ paddingLeft: '20px' }}>
               <img src={neo4jLogo} alt="Neo4j Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>
               <strong><a href='https://neo4j.com/' target="_blank" rel="noopener noreferrer">Neo4j</a></strong> - SWE Intern (Consulting)
@@ -55,12 +62,33 @@ function HomePage() {
         </div>
         <div className="text-column">
           <strong className="section-title">Background</strong>
-          <p>I am a recent graduate from Princeton University with a B.S.E. degree in <strong>Computer Science</strong>. In addition to my major, I picked up a minor in <strong>Statistics and Machine Learning. </strong></p>
-          <p>I have experience in <strong>software development</strong>, <strong>academic research</strong>, <strong>machine learning</strong>, and <strong>leadership</strong> through professional and volunteer work. Some more specific interests of mine include GIS applications, decentralized systems, technology policy, healthcare innovation, and graph data science</p>
+          <p>I am currently a CS grad student at Cornell Tech - Cornell's engineering-focused campus in New York City, and a recent graduate from Princeton University with a B.S.E. degree in <strong>Computer Science</strong>. In addition to my major, I picked up a minor in <strong>Statistics and Machine Learning. </strong></p>
+          <p>I have experience in <strong>software development</strong>, <strong>academic research</strong>, <strong>machine learning</strong>, and <strong>leadership</strong> through professional and volunteer work. Some more specific interests of mine include AI development, GIS applications, decentralized systems, technology policy, payment solutions, and graph data science. Click on the images below to check out
+          some of my work!</p>
         </div>
       </div>
         <div className="three-column-container">
           <div className="row">
+          <div className="column">
+            <a href=' https://receptive-cause-b76.notion.site/Sepolia-Roulette-05df9f3c249544adadb1da70af12bb6e' target="_blank" rel="noopener noreferrer">
+                <div className="image-container">
+                  <img src={EthCasino} alt="Project 4" width="200" height="auto" />
+                  <div className="overlay">
+                    <div className="text" id="hide-on-small">A casino game where players stake Sepolia in a competitive, roulette-inspired game, leveraging a smart contract to manage and distribute bets and winnings. With no house and contract transparency, our game is fair and decentralized for all players. Click here to watch gameplay and learn more.</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          <div className="column">
+              <a href='https://receptive-cause-b76.notion.site/A-RAG-Solution-for-Neo4j-Documentation-Retrieval-29575b02021444bf8f4961de382ae69b' target="_blank" rel="noopener noreferrer">
+              <div className="image-container">
+                <img src={chatImage} alt="Project 6" width="200" height="auto" />
+                <div className="overlay">
+                  <div className="text" id="hide-on-small">The Neo4j Chatbot — DOCBOT 1.0 — is used by Neo4j Developers, Neo4j Professional Services Clients, and Consulting Engineers internally to grab information from Neo4j Documentation and, with the current version, limited case recommendations based on anonymized solution assessments. The chatbot is extremely conversational and can be prompted for summaries of documentation sections, debugging of errant code, code improvement, code generation, and use-case recommendations.</div>
+                </div>
+              </div>
+              </a>
+            </div>
             <div className="column">
               <Link to="./p2">
                 <div className="image-container">
@@ -73,17 +101,8 @@ function HomePage() {
                 </div>
               </Link>
             </div>
-            <div className="column">
-              <a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">
-                <div className="image-container">
-                  <img src={trek} alt="TrekAI" width="200" height="auto" />
-                  <div className="overlay">
-                    <div className="text" id="hide-on-small">TrekAI is a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
-                    integrates openAI's API for trip recommendation and is built on React.js, Flask, and AWS. TrekAI is in progress as of December 2023. Click here to view pre-launch page.</div>
-                  </div>
-                </div>
-              </a>
-            </div>
+          </div>
+          <div className="row">
             <div className="column">
               <Link to="/research">
                 <div className="image-container" onClick={() => window.scrollTo(0, 0)}>
@@ -94,19 +113,6 @@ function HomePage() {
                   </div>
                 </div>
               </Link>
-            </div>
-          </div>
-          <div className="row">
-            <div className="column">
-            <a href=' https://receptive-cause-b76.notion.site/Sepolia-Roulette-05df9f3c249544adadb1da70af12bb6e' target="_blank" rel="noopener noreferrer">
-                <div className="image-container">
-                  <img src={EthCasino} alt="Project 4" width="200" height="auto" />
-                  <div className="overlay">
-                    <div className="text" id="hide-on-small">A casino game where players stake Sepolia in a competitive, roulette-inspired game, leveraging a smart contract to manage and distribute bets and winnings. With no house and contract transparency, our game is fair and decentralized for all players. Click here to watch gameplay and learn more.
-</div>
-                  </div>
-                </div>
-              </a>
             </div>
             <div className="column">
             <Link to="/gallery">
@@ -119,12 +125,15 @@ function HomePage() {
             </Link>
             </div>
             <div className="column">
-              <div className="image-container">
-                <img src={GraySquare} alt="Project 6" width="200" height="auto" />
-                <div className="overlay">
-                  <div className="text" id="hide-on-small"></div>
+              <a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">
+                <div className="image-container">
+                  <img src={trek} alt="TrekAI" width="200" height="auto" />
+                  <div className="overlay">
+                    <div className="text" id="hide-on-small">TrekAI is a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
+                    integrates openAI's API for trip recommendation and is built on React.js, Flask, and AWS. TrekAI is in progress as of August 2024. Click here to view the beta landing page.</div>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
