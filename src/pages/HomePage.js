@@ -6,12 +6,14 @@ import headShot from '../images/headshot3.png'
 import chatImage from '../images/docbot.png'
 import EthCasino from '../images/sepoliaHomepage.png'
 import GallerySquare from '../images/GallerySquare.png'
-import GraySquare from '../images/GraySquare.jpg'
+// import GraySquare from '../images/GraySquare.jpg'
 import hpTechVenturesLogo from '../images/HPTechVentures.png'
 import trek from '../images/TrekAI_logo_white_bg.png'
 import cluster from '../images/Cluster2.png'
 import vital from '../images/VM2.png'
 import { Link } from 'react-router-dom';
+
+
 
 function HomePage() {
   return (
@@ -30,7 +32,7 @@ function HomePage() {
          
           <p>
             
-            <strong className="section-title">Current Endeavors</strong>
+            <strong className="section-title">Currently</strong>
             <div style={{ paddingLeft: '20px' }}>
               <img src={cornellLogo} alt="Cornell Logo" style={{ width: "50px", marginRight: "5px", verticalAlign: "middle" }}/>
               Cornell CS Master's Student
@@ -39,11 +41,12 @@ function HomePage() {
               <img src={neo4jLogo} alt="Neo4j Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>
               <strong><a href='https://neo4j.com/' target="_blank" rel="noopener noreferrer">Neo4j</a></strong> - SWE Intern (Consulting)
             </div>
-            <div style={{ paddingLeft: '20px' }}>
+            <div style={{ paddingLeft: '20px', paddingBottom: '15px'}}>
               <img src={trekAILogo} alt="TrekAI Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>
               <strong><a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">TrekAI</a></strong> - hiking recommendation platform
             </div>
-            <strong className="section-title">Recent Work</strong>
+            
+            <strong className="section-title">Recently</strong>
             <ul>
               
 
@@ -137,7 +140,39 @@ function HomePage() {
             </div>
           </div>
         </div>
+        <div className="container">
+  {/* ...existing code... */}
+  <div className='coursework-section'>
+  <strong className="section-title">Coursework</strong>
+      <div className="coursework-list">
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://www.cs.princeton.edu/courses/archive/spring24/cos217/info.php', '_blank')}>Systems Programming</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://course-websites.pages.dev/', '_blank')}>Advanced Programming Techniques</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://cos316.princeton.systems/', '_blank')}>Computer System Design</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://www.cs.princeton.edu/courses/archive/spring24/cos240/', '_blank')}>Reasoning About Computation</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://www.cs.princeton.edu/courses/archive/fall24/cos226/', '_blank')}>Algorithms and Data Structures</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://courses.cornell.edu/preview_course_nopop.php?catoid=60&coid=1100457', '_blank')}>Algorithms for Applications (Graduate)</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://classes.cornell.edu/browse/roster/FA22/class/CS/5682', '_blank')}>Human-Computer Interaction (Graduate)</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://web3.princeton.edu/elements-of-defi/', '_blank')}>Decentralized Finance</button>
+      <button style={{backgroundColor: '#364958'}} class="course-button" onClick={() => window.open('https://www.cs.princeton.edu/courses/archive/fall23/cos350/#:~:text=The%20course%20aims%20to%20help,when%20building%20and%20deploying%20technology.', '_blank')}>Ethics of Computing</button>
+      <button style={{backgroundColor: '#3b6064'}} class="course-button" onClick={() => window.open('https://exams.math.princeton.edu/mat202', '_blank')}>Linear Algebra</button>
+      <button style={{backgroundColor: '#3b6064'}} class="course-button" onClick={() => window.open('https://exams.math.princeton.edu/mat201', '_blank')}>Multivariable Calculus</button>
+      <button style={{backgroundColor: '#3b6064'}} class="course-button" onClick={() => window.open('https://www.cs.princeton.edu/~pparedes/teaching/spring23/cos445/', '_blank')}>Economics and Computing</button>
+      <button style={{backgroundColor: '#3b6064'}} class="course-button" onClick={() => window.open('https://fan.princeton.edu/fan/classes/245.html', '_blank')}>Statistics</button>
+      <button style={{backgroundColor: '#55828b'}} class="course-button" onClick={() => window.open('https://princeton-introml.github.io/', '_blank')}>Intro to Machine Learning</button>
+      <button style={{backgroundColor: '#55828b'}} class="course-button" onClick={() => window.open('https://bstewart.scholar.princeton.edu/soc306sml306-machine-learning-social-data-opportunities-and-challenges', '_blank')}>Machine Learning With Social Data</button>
+      <button style={{backgroundColor: '#55828b'}} class="course-button" onClick={() => window.open('https://csml.princeton.edu/news/sml-310-research-projects-data-science-now-accepting-applications', '_blank')}>Research in Data Science</button>
+      <button style={{backgroundColor: '#55828b'}} class="course-button" onClick={() => window.open('https://classes.cornell.edu/browse/roster/FA22/class/CS/5781', '_blank')}>Machine Learning Engineering (Graduate)</button>
+      <button style={{backgroundColor: '#55828b'}} class="course-button" onClick={() => window.open('https://classes.cornell.edu/browse/roster/SP23/class/CS/5787', '_blank')}>Deep Learning (Graduate)</button>
+      <button style={{backgroundColor: '#55828b'}} class="course-button" onClick={() => window.open('https://registrar.princeton.edu/course-offerings/course-details?courseid=015203&term=1242', '_blank')}>Computational Models of Cognition</button>
+      <button style={{backgroundColor: '#87bba2'}} class="course-button" onClick={() => window.open('https://registrar.princeton.edu/course-offerings/course-details?term=1252&courseid=012812', '_blank')}>Creating Value: Entrepreneurship</button>
+      <button style={{backgroundColor: '#87bba2'}} class="course-button" onClick={() => window.open('https://registrar.princeton.edu/course-offerings/course-details?term=1252&courseid=012448', '_blank')}>Leadership Development for Business</button>
+      <button style={{backgroundColor: '#87bba2'}} class="course-button" onClick={() => window.open('https://registrar.princeton.edu/course-offerings/course-details?term=1252&courseid=013922', '_blank')}>Venture Capital Finance</button>
+      <button style={{backgroundColor: '#87bba2'}} class="course-button" onClick={() => window.open('https://classes.cornell.edu/browse/roster/FA23/class/TECHIE/5310', '_blank')}>Business Fundamentals (Graduate)</button>
+      <button style={{backgroundColor: '#87bba2'}} class="course-button" onClick={() => window.open('https://classes.cornell.edu/browse/roster/FA23/class/TECH/5900', '_blank')}>Product Studio (Graduate)</button>
       </div>
+  </div>
+  </div>
+</div>
   );
 }
 
