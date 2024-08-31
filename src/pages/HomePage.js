@@ -39,7 +39,7 @@ function HomePage() {
             </div>
             <div style={{ paddingLeft: '20px' }}>
               <img src={neo4jLogo} alt="Neo4j Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>
-              <strong><a href='https://neo4j.com/' target="_blank" rel="noopener noreferrer">Neo4j</a></strong> - SWE Intern (Consulting)
+              <strong><a href='https://neo4j.com/' target="_blank" rel="noopener noreferrer">Neo4j</a></strong> - SWE Intern
             </div>
             <div style={{ paddingLeft: '20px', paddingBottom: '15px'}}>
               <img src={trekAILogo} alt="TrekAI Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>

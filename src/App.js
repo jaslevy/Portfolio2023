@@ -34,8 +34,8 @@ function App() {
               <Nav className="ml-auto">
                 <CustomNavLink as={Link} to="/">Home</CustomNavLink>
                 <CustomNavLink as={Link} to="/research">Research</CustomNavLink>
-                <CustomNavLink as={Link} to="/gallery">Gallery</CustomNavLink>
                 <CustomNavLink as={Link} to="/coursework">Coursework</CustomNavLink>
+                <CustomNavLink as={Link} to="/gallery">Gallery</CustomNavLink>
                 <CustomNavLink as={Link} to="/about">About</CustomNavLink>
                 
                 
