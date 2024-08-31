@@ -1,6 +1,5 @@
 import React from 'react';
 import fencing from '../images/fencing.jpg'
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 
 
 

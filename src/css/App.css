@@ -230,8 +230,7 @@ div.custom-navbar .icons a {
   gap: 5px 5px; /* Reduced vertical gap */
   align-items: flex-start;
   padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  padding-bottom: 40px;
 }
 .column {
   flex: 1 0 100%; /* Each column takes full width on small screens */
