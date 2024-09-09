@@ -1,6 +1,7 @@
 import React from 'react';
 import trekAILogo from '../images/TREK AI LOGO.svg'
 import neo4jLogo from '../images/neo4j_logo_globe.png'
+import MockMeLogo from '../images/MockMeBlack.png'
 import cornellLogo from '../images/Cornell-University-Seal-Logo.png'
 import headShot from '../images/headshot3.png'
 import chatImage from '../images/docbot.png'
@@ -42,8 +43,8 @@ function HomePage() {
               <strong><a href='https://neo4j.com/' target="_blank" rel="noopener noreferrer">Neo4j</a></strong> - SWE Intern
             </div>
             <div style={{ paddingLeft: '20px', paddingBottom: '15px'}}>
-              <img src={trekAILogo} alt="TrekAI Logo" style={{ width: "40px", marginRight: "15px", verticalAlign: "middle" }}/>
-              <strong><a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">TrekAI</a></strong> - hiking recommendation platform
+              <img src={MockMeLogo} alt="MockMe Logo" style={{ width: "45px", marginRight: "10px", verticalAlign: "middle" }}/>
+              <strong>MockMe</strong> - personalized mock interviews
             </div>
             
             <strong className="section-title">Recently</strong>
@@ -128,12 +129,12 @@ function HomePage() {
             </Link>
             </div>
             <div className="column">
-              <a href='https://trekai-beta-landing.vercel.app/' target="_blank" rel="noopener noreferrer">
+              <a href='https://trek-ai-concept.vercel.app/' target="_blank" rel="noopener noreferrer">
                 <div className="image-container">
                   <img src={trek} alt="TrekAI" width="200" height="auto" />
                   <div className="overlay">
-                    <div className="text" id="hide-on-small">TrekAI is a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
-                    integrates openAI's API for trip recommendation and is built on React.js, Flask, and AWS. TrekAI is in progress as of August 2024. Click here to view the beta landing page.</div>
+                    <div className="text" id="hide-on-small">TrekAI is a working concept for a dynamic platform designed to assist travelers in discovering hiking recommendations tailored to their budget preferences. This product
+                    will integrate openAI's API for trip recommendation and is to be built on React.js, Flask, and AWS. Click here to view the beta landing page.</div>
                   </div>
                 </div>
               </a>
