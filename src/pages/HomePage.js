@@ -1,5 +1,5 @@
 import React from 'react';
-import trekAILogo from '../images/TREK AI LOGO.svg'
+// import trekAILogo from '../images/TREK AI LOGO.svg'
 import neo4jLogo from '../images/neo4j_logo_globe.png'
 import MockMeLogo from '../images/MockMeBlack.png'
 import cornellLogo from '../images/Cornell-University-Seal-Logo.png'
