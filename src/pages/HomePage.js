@@ -100,7 +100,7 @@ function HomePage() {
                 <div className="image-container">
                   <img src={EDerm} alt="Research" width="200" height="auto" />
                   <div className="overlay">
-                    <div className="text" id="hide-on-small">As part of my graduate coursework, I am building a hybrid-vector search Proof-of-Concept for Integrated Dermatology. The solution aims to increase revenue capture and decrease collection costs by improving patient understanding of financial responsibility. This research-backed approach involves implementing a vector search system for a post-insurance-filtering match of anonymized, demographic EHR data, This match drives accurate bill estimates for patients.</div>
+                    <div className="text" id="hide-on-small">As part of my graduate coursework, I am building a hybrid-vector search Proof-of-Concept for Integrated Dermatology. The solution aims to increase revenue capture and decrease collection costs by improving patient understanding of financial responsibility. This research-backed approach involves implementing a vector search system for a post-insurance-filtering match of anonymized, demographic EHR data. This match drives accurate bill estimates for patients.</div>
                   </div>
                 </div>
             </div>
