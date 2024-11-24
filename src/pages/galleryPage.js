@@ -1,10 +1,12 @@
 import React from 'react';
 import { Gallery } from 'react-grid-gallery';
-import '../css/App.css'; // Make sure the path is correct
+import '../styles/GalleryPage.css';
 
 function createOverlay(filename) {
-    // Remove the file extension from the filename
-    const cleanCaption = filename.replace(/\.[^/.]+$/, "");
+    const cleanCaption = filename.replace(/\.[^/.]+$/, "")
+        .replace(/-/g, ' ')  // Replace hyphens with spaces
+        .replace(/([A-Z])/g, ' $1')  // Add space before capital letters
+        .trim();
     return (
         <div className="custom-overlay__caption">
             {cleanCaption}
@@ -13,34 +15,35 @@ function createOverlay(filename) {
 }
 
 function importAll(r) {
-  let images = [];
-  r.keys().forEach((item) => { 
-    images.push({
-      src: r(item),
-      thumbnail: r(item),
-      thumbnailWidth: 320,
-      thumbnailHeight: 200,
-      customOverlay: createOverlay(item.replace('./', '')) // Remove './' and pass to createOverlay
+    let images = [];
+    r.keys().forEach((item) => {
+        images.push({
+            src: r(item),
+            thumbnail: r(item),
+            thumbnailWidth: 350,
+            thumbnailHeight: 240,
+            customOverlay: createOverlay(item.replace('./', '')),
+            isSelected: false,
+        });
     });
-  });
-  return images;
+    return images;
 }
 
 const images = importAll(require.context('../Gallery/', false, /\.(png|jpe?g|svg)$/));
 
 const GalleryPage = () => {
-
     return (
         <div className="gallery-container">
-            <Gallery
-                images={images.map((img, idx) => ({
-                    ...img,
-                }))}
-                enableImageSelection={false}
-                columnCount={"auto"}
-                columnWidth={230}
-                gapSize={24}
-            />
+            <div className="gallery-grid">
+                <Gallery
+                    images={images}
+                    enableImageSelection={false}
+                    rowHeight={240}
+                    margin={12}
+                    maxRows={20}
+                    showLightboxThumbnails={true}
+                />
+            </div>
         </div>
     );
 }

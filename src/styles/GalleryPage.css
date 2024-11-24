@@ -1,0 +1,61 @@
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.gallery-grid {
+  margin: 0 -12px;  /* Negative margin to offset the gap */
+}
+
+/* Custom overlay styling */
+.custom-overlay__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.ReactGridGallery_tile:hover .custom-overlay__caption {
+  opacity: 1;
+}
+
+.ReactGridGallery_tile {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.ReactGridGallery_tile:hover {
+  transform: translateY(-3px);
+}
+
+.ReactGridGallery_tile-viewport {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ReactGridGallery_tile img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ReactGridGallery_tile:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 1rem;
+  }
+  
+  .gallery-grid {
+    margin: 0 -8px;
+  }
+}

@@ -5,7 +5,7 @@ import headShot from '../images/headshot3.png'
 import chatImage from '../images/docbot.png'
 import EthCasino from '../images/sepoliaHomepage.png'
 import GallerySquare from '../images/GallerySquare.png'
-import EDerm from '../images/ederm.png'
+import EDerm from '../images/ID_home.png'
 import GraySquare from '../images/GraySquare.jpg'
 import hpTechVenturesLogo from '../images/HPTechVentures.png'
 import trek from '../images/TrekAI_logo_white_bg.png'
@@ -39,7 +39,7 @@ function HomePage() {
               <strong style={{ color: 'black' }}>Cornell CS Master's Student</strong>
               <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
                 <li>Research on <strong style={{ color: 'black' }}>multi-hop reasoning</strong> for <strong style={{ color: 'black' }}>agentic RAG systems</strong></li>
-                <li>Technical Consulting for <a href="https://mydermgroup.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}><strong>Integrated Dermatology</strong></a>. Building a <strong style={{ color: 'black' }}>hybrid vector-search</strong> solution for demographic-based payment estimation</li>
+                <li>Technical Consulting for <a href="https://mydermgroup.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}><strong>Integrated Dermatology</strong></a>. Building a <strong style={{ color: 'black' }}>hybrid vector-search</strong> system for post-visit bill estimation</li>
               </ul>
             </div>
             
@@ -97,12 +97,14 @@ function HomePage() {
               </a>
             </div>
             <div className="column">
-                <div className="image-container">
-                  <img src={EDerm} alt="Research" width="200" height="auto" />
-                  <div className="overlay">
-                    <div className="text" id="hide-on-small">As part of my graduate coursework, I am building a hybrid-vector search Proof-of-Concept for Integrated Dermatology. The solution aims to increase revenue capture and decrease collection costs by improving patient understanding of financial responsibility. This research-backed approach involves implementing a vector search system for a post-insurance-filtering match of anonymized, demographic EHR data. This match drives accurate bill estimates for patients.</div>
+                <Link to="/ederm">
+                  <div className="image-container">
+                    <img src={EDerm} alt="Research" width="200" height="auto" />
+                    <div className="overlay">
+                      <div className="text" id="hide-on-small">As part of my graduate coursework, I designed an <strong>AWS serverless architecture</strong> for Integrated Dermatology to improve post-visit bill estimation. The system <strong>predicts 837 claim amounts from 835 remittance data</strong> to estimate patient out-of-pocket costs when insurance deductibles are unmet. Using a hybrid vector search, it semantically matches anonymized demographic EHR data with historical billing records, enhancing patient financial transparency while boosting revenue capture and reducing collection costs.</div>
+                    </div>
                   </div>
-                </div>
+                </Link>
             </div>
           </div>
           <div className="row">

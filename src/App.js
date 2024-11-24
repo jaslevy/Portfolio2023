@@ -14,7 +14,7 @@ import CustomNavLink from './CustomNavLink';
 import LoadingScreen from './pages/LoadingScreen.js';
 import './css/App.css';
 import GalleryPage from './pages/galleryPage.js';
-
+import EDermPage from './pages/EDermPage.js';
 
 function App() {
   const [showHomePage, setShowHomePage] = useState(false);
@@ -61,9 +61,10 @@ function App() {
             <Route path="/research" element={<ProjectThree />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/coursework" element={<CourseworkPage />} />
+            <Route path="/ederm" element={<EDermPage />} />
           </Routes>
           <div class="acknowledgment">
-            © 2023 inspired by <a href="https://www.tedsumers.info" target="_blank" rel="noopener noreferrer">Ted Sumers Site</a> and designs are from <a href="https://patakk.tumblr.com" target="_blank" rel="noopener noreferrer">PATAKK on Tumblr</a>.
+            2023 inspired by <a href="https://www.tedsumers.info" target="_blank" rel="noopener noreferrer">Ted Sumers Site</a> and designs are from <a href="https://patakk.tumblr.com" target="_blank" rel="noopener noreferrer">PATAKK on Tumblr</a>.
           </div>
         </div>
       )}
