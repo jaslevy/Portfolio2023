@@ -101,7 +101,7 @@ function HomePage() {
                   <div className="image-container">
                     <img src={EDerm} alt="Research" width="200" height="auto" />
                     <div className="overlay">
-                      <div className="text" id="hide-on-small">As part of my graduate coursework, I designed an <strong>AWS serverless architecture</strong> for Integrated Dermatology to improve post-visit bill estimation. The system <strong>predicts 837 claim amounts from 835 remittance data</strong> to estimate patient out-of-pocket costs when insurance deductibles are unmet. Using a hybrid vector search, it semantically matches anonymized demographic EHR data with historical billing records, enhancing patient financial transparency while boosting revenue capture and reducing collection costs.</div>
+                      <div className="text" id="hide-on-small">As part of my graduate coursework, I designed an <strong>AWS serverless architecture</strong> for Integrated Dermatology to improve post-visit bill estimation. The system <strong>predicts 837 claim amounts from 835 remittance data</strong> to estimate patient out-of-pocket costs when insurance deductibles are unmet. Using a hybrid vector search, it semantically matches anonymized EHR data with historical billing records, enhancing patient financial transparency while boosting revenue capture and reducing collection costs.</div>
                     </div>
                   </div>
                 </Link>
