@@ -4,11 +4,50 @@ import NYCMETRO from '../images/NYCMETRO.png'
 import CertPost from '../images/SML-Poster_36x24png.png'
 import Cluster from '../images/Cluster2.png'
 import JDL from '../images/JDL.png'
+import RAG from '../images/RAG4.png'
 
 function ProjectTwo() {
   return (
     <>
-        
+        <div className="two-column-container-research-projects">
+            <div className="text-column-research">
+                <h5>Accuracy or Efficiency: Analyzing the Trade-offs in Performance
+                when Using Predicted Hop Counts in Multi-Hop RAG</h5>
+                <p>Retrieval-Augmented Generation (RAG) systems are
+    an increasingly popular application for large language
+    models. Multi-hop reasoning is an important class of
+
+    tasks within RAG that requires reasoning over mul-
+    tiple documents to answer complex queries. Current
+
+    RAG systems struggle with multi-hop reasoning tasks
+    without massive amounts of context. As such, retrieval
+
+    systems for completing multi-hop RAG tasks can be-
+    come expensive, redundant, and inefficient at scale. This
+
+    paper investigates strategies to optimize the trade-off
+    between accuracy and efficiency in multi-hop reasoning
+    tasks by predicting the hop count needed for the task.
+    In addition, we introduce a metric - Accuracy Efficiency
+    Index (AEI) - by which we can measure this trade-off.
+    Our work shows that using the predicted hop count
+
+    plus a certain amount of retrieval steps can lead to in-
+    creased accuracy while minimizing retrieval costs. By
+
+    analyzing performance changes as additional context
+    is included, our work provides insight into scalable and
+    cost-efficient implementations for RAG systems.</p>
+
+            <div style={{ textAlign: 'center' }}>
+                <a href="https://drive.google.com/file/d/1aSQMIeaGc0gHRl_PH1e78BDiEmAXUzWG/view" target="blank"> PDF</a>
+            </div>
+            </div>
+        <div className="image-column">
+             <img src={RAG} alt="Description" width="300" height="auto" />
+        </div>
+      </div>
         <div className="two-column-container-research-projects">
             <div className="text-column-research">
                 <h5>Structural Determinants of Metro System Resilience: A Graph-Theoretic

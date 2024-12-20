@@ -14,8 +14,8 @@ function AboutPage() {
           <div className="about-card">
             <h2>Current</h2>
             <p>
-              I am a CS grad student at <a href="https://tech.cornell.edu/" target="_blank" rel="noopener noreferrer">Cornell Tech</a> living in NYC, 
-              where I'm focusing on advanced computer science concepts and their real-world applications.
+              I am a CS grad student at <a href="https://tech.cornell.edu/" target="_blank" rel="noopener noreferrer">Cornell</a> living in NYC, 
+              where I'm focusing on Machine Learning Engineering, Human-Computer Interaction, and Product Management.
             </p>
           </div>
 

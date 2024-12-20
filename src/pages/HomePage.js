@@ -6,13 +6,15 @@ import chatImage from '../images/docbot.png'
 import EthCasino from '../images/sepoliaHomepage.png'
 import GallerySquare from '../images/GallerySquare.png'
 import EDerm from '../images/ID_home.png'
-import GraySquare from '../images/GraySquare.jpg'
+// import GraySquare from '../images/GraySquare.jpg'
 import hpTechVenturesLogo from '../images/HPTechVentures.png'
 import trek from '../images/TrekAI_logo_white_bg.png'
 import cluster from '../images/Cluster2.png'
 import vital from '../images/VM2.png'
 import MockMe from '../images/MockMe.png'
 import { Link } from 'react-router-dom';
+import Elise from '../images/elise_tran.png'
+import RAG from '../images/RAG4.png'
 
 
 
@@ -36,11 +38,19 @@ function HomePage() {
             <strong className="section-title" style={{ color: 'black' }}>Currently</strong>
             <div style={{ paddingLeft: '20px' ,paddingTop: "5px" }}>
               <img src={cornellLogo} alt="Cornell Logo" style={{ width: "50px", marginRight: "5px", verticalAlign: "middle"}}/>
-              <strong style={{ color: 'black' }}>Cornell CS Master's Student</strong>
-              <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
-                <li>Research on <strong style={{ color: 'black' }}>multi-hop reasoning</strong> for <strong style={{ color: 'black' }}>agentic RAG systems</strong></li>
-                <li>Technical Consulting for <a href="https://mydermgroup.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}><strong>Integrated Dermatology</strong></a>. Building a <strong style={{ color: 'black' }}>hybrid vector-search</strong> system for post-visit bill estimation</li>
-              </ul>
+              <strong style={{ color: 'black' }}> Cornell CS Master's Student</strong>
+              {/* <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
+
+
+              </ul> */}
+            </div>
+            <div style={{ paddingLeft: '20px' ,paddingTop: "5px" }}>
+              <img src={Elise} alt="Elise Logo" style={{ width: "50px", marginRight: "5px", verticalAlign: "middle"}}/>
+              <strong style={{ color: 'black' }}> Solutions Engineer at <a href='https://www.eliseai.com/' target="_blank" rel="noopener noreferrer">EliseAI</a></strong>
+              {/* <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
+
+
+              </ul> */}
             </div>
             
             <strong className="section-title" style={{ color: 'black' }}>Recently</strong>
@@ -61,6 +71,8 @@ function HomePage() {
                 <strong style={{ color: 'black' }}><a href='https://github.com/jaslevy/Ethereum_Casino' target="_blank" rel="noopener noreferrer">Ethereum Casino</a></strong> - Developed Solidity smart contract and web3.js + React frontend
               </li>
                 <li><strong style={{ color: 'black' }}><a href='https://drive.google.com/file/d/1c-p9I4YBRdzwnP4rHjoay2T8SqXe1xWx/view' target="_blank" rel="noopener noreferrer">Network Centrality Analysis on US Critical Infrastructure</a></strong> - research for ORF387 (Networks)</li>
+                <li><strong style={{ color: 'black' }}><a href='https://drive.google.com/file/d/1aSQMIeaGc0gHRl_PH1e78BDiEmAXUzWG/view?usp=sharing' target="_blank" rel="noopener noreferrer">Analyzing the Trade-offs in Performance
+                when Using Predicted Hop Counts in Multi-Hop RAG</a></strong></li>
             </ul>
           
 
@@ -68,9 +80,8 @@ function HomePage() {
         </div>
         <div className="text-column">
           <strong className="section-title" style={{ color: 'black' }}>Background</strong>
-          <p style={{ paddingTop: "10px" }}>I am currently a CS grad student at Cornell Tech - Cornell's engineering-focused campus in New York City, and a recent graduate from Princeton University with a B.S.E. degree in <strong style={{ color: 'black' }}>Computer Science</strong>. In addition to my major, I picked up a minor in <strong style={{ color: 'black' }}>Statistics and Machine Learning. </strong></p>
-          <p>I have experience in <strong style={{ color: 'black' }}>software development</strong>, <strong style={{ color: 'black' }}>academic research</strong>, <strong style={{ color: 'black' }}>machine learning</strong>, and <strong style={{ color: 'black' }}>leadership</strong> through professional and volunteer work. Some more specific interests of mine include agentic AI, healthcare technology, decentralized systems, technology policy, and graph data science. Click on the images below to check out
-          some of my work!</p>
+          <p style={{ paddingTop: "10px" }}>I am currently a CS grad student at Cornell University and a recent graduate from Princeton University with a B.S.E. degree in <strong style={{ color: 'black' }}>Computer Science</strong>. In addition to my major, I picked up a minor in <strong style={{ color: 'black' }}>Statistics and Machine Learning. </strong> I am currently working full-time as a Solutions Engineer at <a href="https://eliseai.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}><b>EliseAI</b></a>.</p>
+          <p>I have experience in <strong style={{ color: 'black' }}>software development</strong>, <strong style={{ color: 'black' }}>academic research</strong>, <strong style={{ color: 'black' }}>machine learning</strong>, and <strong style={{ color: 'black' }}>leadership</strong> through professional and volunteer work. Some more specific interests of mine include agentic AI, healthcare technology, decentralized systems, technology policy, and graph data science. </p>
           <p>For inquiries, please reach out at <a href="mailto:jglevy@alumni.princeton.edu" style={{ color: 'black' }}><strong>jglevy@alumni.princeton.edu</strong></a> or connect with me on <a href="https://www.linkedin.com/in/jasper-levy-956722208/" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}><strong>LinkedIn</strong></a>. Thanks for visiting my page!</p>
         </div>
       </div>
@@ -98,7 +109,7 @@ function HomePage() {
             </div>
             <div className="column">
                 <Link to="/ederm">
-                  <div className="image-container">
+                  <div className="image-container" onClick={() => window.scrollTo(0, 0)}>
                     <img src={EDerm} alt="Research" width="200" height="auto" />
                     <div className="overlay">
                       <div className="text" id="hide-on-small">As part of my graduate coursework, I designed an <strong>AWS serverless architecture</strong> for Integrated Dermatology to improve post-visit bill estimation. The system <strong>predicts 837 claim amounts from 835 remittance data</strong> to estimate patient out-of-pocket costs when insurance deductibles are unmet. Using a hybrid vector search, it semantically matches anonymized EHR data with historical billing records, enhancing patient financial transparency while boosting revenue capture and reducing collection costs.</div>
@@ -120,16 +131,16 @@ function HomePage() {
               </Link>
             </div>
             <div className="column">
-              <Link to="./p2">
-                <div className="image-container">
-                  <img src={vital} alt="VitalMap" width="200" height="auto" />
-                  <div className="overlay">
-                    <div className="text" id="hide-on-small"> I collaborated with Princeton Students for Reproductive Justice and worked closely with a team of 4 other Princeton undergrads to build VitalMap, a platform that provides users with locations and stock of health products on campus.
-                    This Web-App integrates <strong>Python</strong> and <strong>PostgreSQL</strong> for backend functions and <strong>JavaScript, Bootstrap, HTML, CSS</strong> on the frontend. 
-                    </div>
-                  </div>
+            <a href='https://drive.google.com/file/d/1aSQMIeaGc0gHRl_PH1e78BDiEmAXUzWG/view' target="_blank" rel="noopener noreferrer">
+              <div className="image-container">
+                <img src={RAG} alt="Project 5" width="200" height="auto" />
+                <div className="overlay">
+                  <div className="text" id="hide-on-small">This
+                  This paper explores optimizing the trade-off between accuracy and efficiency in multi-hop reasoning tasks by predicting the required hop count. We introduce the <b>Accuracy Efficiency Index (AEI) </b>to measure this trade-off, demonstrating that using the predicted hop count with additional retrieval steps improves accuracy while minimizing costs. Our analysis offers insights into scalable, cost-efficient implementations for <b>RAG</b> systems.
                 </div>
-              </Link>
+              </div>
+              </div>
+            </a>
             </div>
             <div className="column">
                 <div className="image-container">
@@ -165,13 +176,18 @@ function HomePage() {
               </a>
             </div>
             <div className="column">
-              <div className="image-container">
-                <img src={GraySquare} alt="Project 5" width="200" height="auto" />
-                <div className="overlay">
-                  <div className="text" id="hide-on-small">Stay tuned!</div>
+              <Link to="./p2">
+                <div className="image-container">
+                  <img src={vital} alt="VitalMap" width="200" height="auto" />
+                  <div className="overlay">
+                    <div className="text" id="hide-on-small"> I collaborated with Princeton Students for Reproductive Justice and worked closely with a team of 4 other Princeton undergrads to build VitalMap, a platform that provides users with locations and stock of health products on campus.
+                    This Web-App integrates <strong>Python</strong> and <strong>PostgreSQL</strong> for backend functions and <strong>JavaScript, Bootstrap, HTML, CSS</strong> on the frontend. 
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
+            
             
           </div>
         </div>
