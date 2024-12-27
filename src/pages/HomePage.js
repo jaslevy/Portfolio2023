@@ -135,7 +135,7 @@ function HomePage() {
               <div className="image-container">
                 <img src={RAG} alt="Project 5" width="200" height="auto" />
                 <div className="overlay">
-                  <div className="text" id="hide-on-small">This
+                  <div className="text" id="hide-on-small">
                   This paper explores optimizing the trade-off between accuracy and efficiency in multi-hop reasoning tasks by predicting the required hop count. We introduce the <b>Accuracy Efficiency Index (AEI) </b>to measure this trade-off, demonstrating that using the predicted hop count with additional retrieval steps improves accuracy while minimizing costs. Our analysis offers insights into scalable, cost-efficient implementations for <b>RAG</b> systems.
                 </div>
               </div>
